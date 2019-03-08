@@ -83,8 +83,7 @@ holiday_hash.each do |season, holiday|
         print "#{supply_item}, "
         counter += 1
       elsif counter == total_supplies
-        print "#{supply_item}"
-        print "/n"
+        print "#{supply_item}\n"
       end
     end
   end
