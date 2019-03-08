@@ -76,7 +76,7 @@ holiday_hash.each do |season, holiday|
   holiday.each do |holiday, supplies|
     change_1 = holiday.to_s.tr("_", " ")
     final_holiday = change_1.split.map(&:capitalize).join(" ")
-    final_supplies = supplies.to_s
+    final_supplies = supplies.to_s.tr("[", "").tr("]", "")
     puts "  #{final_holiday}: #{final_supplies}"
   end
 end
