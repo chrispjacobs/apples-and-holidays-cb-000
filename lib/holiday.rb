@@ -55,7 +55,21 @@ def all_supplies_in_holidays(holiday_hash)
   # Summer:
   #   Fourth Of July: Fireworks, BBQ
   # etc.
-
+holiday_hash.each do |season, holiday|
+  puts "#{season}:"
+  holiday.each do |holiday, supplies|
+    puts "#{holiday}: "
+    total_supplies = supplies.count
+    counter = 1
+    supplies.each do |supply_item|
+      if counter < total_supplies
+        print "#{supply_item}, "
+        counter += 1
+      elsif counter == total_supplies
+        print "#{supply_item}"
+      end
+    end
+  end
 end
 
 def all_holidays_with_bbq(holiday_hash)
